@@ -3,9 +3,11 @@ import time
 import os
 
 # ====== ENV ======
-TOKEN = os.getenv("8595778284:AAGficu4j0aYs9cKwCyD9Xser4rNLjdFuIY")
-CHAT_ID = os.getenv("1121598543")
+TOKEN = os.getenv("TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
+print("TOKEN:", TOKEN)
+print("CHAT_ID:", CHAT_ID)
 # ====== TELEGRAM ======
 def send_telegram(msg):
     try:
