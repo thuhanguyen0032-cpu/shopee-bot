@@ -96,7 +96,7 @@ COOLDOWN = 60  # chống spam
 
 # ====== START ======
 print("🚀 Bot started")
-send_telegram("🚀 Bot Shopee + Website đang chạy 24/7...")
+send_telegram("TEST BOT OK")
 
 while True:
     print("Đang check...")
