@@ -8,14 +8,18 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 print("TOKEN:", TOKEN)
 print("CHAT_ID:", CHAT_ID)
+
 # ====== TELEGRAM ======
 def send_telegram(msg):
     try:
         url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-        requests.post(url, data={"chat_id": CHAT_ID, "text": msg})
-    except:
-        print("Lỗi gửi Telegram")
-
+        r = requests.post(url, data={
+            "chat_id": CHAT_ID,
+            "text": msg
+        })
+        print("Telegram response:", r.text)
+    except Exception as e:
+        print("Lỗi gửi Telegram:", e)
 # ====== SHOPEE PRODUCTS ======
 SHOPEE_PRODUCTS = [
     {
